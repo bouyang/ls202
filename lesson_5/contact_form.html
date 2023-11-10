@@ -38,43 +38,54 @@
         width: 100%;
       }
 
+      #fn, #ln {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 50%;
+      }
+
+      .info {
+        display: inline-block;
+        box-sizing: border-box;
+      }
+
+      .city {
+        width: 50%;
+      }
+
+      .state {
+        width: 10%;
+      }
+
+      .zip {
+        width: 40%;
+      }
+
     </style>
   </head>
   <body>
     <form action="" method="post">
       <fieldset>
+        <dl id="fn">
+          <dt><label for="first_name">First Name</label></dt>
+          <dd><input type="text" name="first_name" id="first_name"></dd>
+        </dl><!--
+        --><dl id="ln">
+          <dt><label for="last_name">Last Name</label></dt>
+          <dd><input type="text" name="last_name" id="last_name"></dd>
+        </dl>
+
         <dl>
-          <dt>
-            <label for="first_name">First Name</label>
-          </dt>
-          <dd>
-            <input type="text" name="first_name" id="first_name">
-          </dd>
+          <dt><label for="email">Email Address</label></dt>
+          <dd><input type="email" name="email" id="email"></dd>
+        </dl>
 
-          <dt>
-            <label for="last_name">Last Name</label>
-          </dt>
-          <dd>
-            <input type="text" name="last_name" id="last_name">
-          </dd>
-
-          <dt>
-            <label for="email">Email</label>
-          </dt>
-          <dd>
-            <input type="email" name="email" id="email" placeholder="name@example.com">
-          </dd>
-
-          <dt>
-            <label for="city">City</label>
-          </dt>
-          <dd>
-            <input type="text" name="city" id="city">
-          </dd>
-
-          <dt>
-            <label for="state">State</label>
-          </dt>
+        <dl class="info city">
+          <dt><label for="city">City</label></dt>
+          <dd><input type="text" name="city" id="city"></dd>
+        </dl><!--
+        --><dl class="info state">
+          <dt> <label for="state">State</label> </dt>
           <dd>
             <select name="state">
               <option>AK</option>
@@ -130,13 +141,10 @@
               <option>WY</option>
             </select>
           </dd>
-
-          <dt>
-            <label for="zipcode">Zipcode</label>
-          </dt>
-          <dd>
-            <input type="text" name="zipcode" id="zipcode" size="5" placeholder="12345" pattern="[0-9]{5}">
-          </dd>
+        </dl><!--
+        --><dl class="info zip">
+          <dt><label for="zip">Zip</label></dt>
+          <dd><input type="text" name="zip" id="zip"></dd>
         </dl>
       </fieldset>
 
